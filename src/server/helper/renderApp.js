@@ -1,9 +1,9 @@
 import { renderToString } from 'react-dom/server'
 import getHtmlTemplate from './htmlTemplate'
-import root from '../../app/components/root'
+import Root from '../../app/components/Root'
 
 const renderApp = () => {
-  const html = renderToString(root())
+  const html = renderToString(Root())
   const something = getHtmlTemplate(html)
   return something
 }

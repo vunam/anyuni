@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node .",
+    "build": "webpack --config ./webpack/dev.config.js",
     "lint": "eslint ./src/**",
     "test": "jest",
     "dev": "nodemon .",
@@ -22,9 +23,11 @@
     "nodemon": "^1.11.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "webpack-dashboard": "^0.2.1"
   },
   "devDependencies": {
+    "babel-loader": "^6.2.10",
     "eslint": "^3.14.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
