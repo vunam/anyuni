@@ -21,8 +21,8 @@ router
   })
 
   // Our app
-  .get('/*', (ctx, next) => {
-    ctx.body = renderApp()
+  .get('/*', async (ctx, next) => {
+    ctx.body = await renderApp(ctx)
     next()
   })
 

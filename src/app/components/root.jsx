@@ -1,5 +1,8 @@
 import React from 'react'
+import { Router, browserHistory } from 'react-router'
 
-const Root = () => <div>React App</div>
+const Root = (renderProps) => (
+  <Router history={browserHistory} {...renderProps} />
+)
 
 export default Root
