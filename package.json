@@ -10,8 +10,8 @@
     "build": "webpack --config ./webpack/dev.config.js",
     "lint": "eslint ./src/**",
     "test": "jest",
-    "dev": "nodemon .",
-    "dev:server": "node ."
+    "dev": "nodemon . & yarn run dev:server",
+    "dev:server": "./node_modules/.bin/webpack-dev-server --config ./webpack/dev.config.js"
   },
   "dependencies": {
     "babel": "^6.5.2",

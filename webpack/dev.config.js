@@ -21,6 +21,18 @@ const webpackConfig = {
         loader: 'babel'
       }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, '../public'),
+    stats: {
+      chunks: false,
+      colors: true,
+      children: false
+    },
+    publicPath: '/assets/dist/',
+    proxy: {
+      '*': `http://localhost:${process.env.PORT || 3000}`
+    }
   }
 }
 

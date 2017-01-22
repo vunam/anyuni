@@ -5,7 +5,7 @@ import Other from './containers/Other/Other'
 import NotFound from './containers/NotFound/NotFound'
 
 const Routes = (
-  <Route>
+  <Route path="/">
     <IndexRoute component={Home} />
     <Route path="other" component={Other} />
     <Route path="*" component={NotFound} />
