@@ -4,6 +4,7 @@ const getHtmlTemplate = (html) => `
     <head>
       <title>anyuni</title>
       <meta charset="utf-8">
+      <script src="/assets/dist/app.js"></script>
     </head>
     <body>
       <div id="root">

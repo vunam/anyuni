@@ -1,18 +1,29 @@
 import KoaRouter from 'koa-router'
+import send from 'koa-send'
 import renderApp from './helper/renderApp'
 
 const router = new KoaRouter()
 
-// Our app
-router.get('/*', (ctx, next) => {
-  ctx.body = renderApp()
-  next()
-})
+router
+  .get('/favicon.ico', (ctx) => {
+    ctx.body = 'favicon'
+  })
 
-// Reserved for api
-router.get('/api/*', (ctx, next) => {
-  ctx.body = 'hello anyuni'
-  next()
-})
+  // Reserved for api
+  .get('/api/*', (ctx) => {
+    ctx.body = 'hello anyuni'
+  })
+
+  // assets
+  .get('/assets/*', (ctx, next) => {
+    if (!ctx.params[0]) return next()
+    return send(ctx, `./public/${ctx.params[0]}`)
+  })
+
+  // Our app
+  .get('/*', (ctx, next) => {
+    ctx.body = renderApp()
+    next()
+  })
 
 export default router.routes()
