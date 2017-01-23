@@ -11,7 +11,7 @@
     "lint": "eslint ./src/**",
     "test": "jest",
     "dev": "nodemon . & yarn run dev:server",
-    "dev:server": "./node_modules/.bin/webpack-dev-server --config ./webpack/dev.config.js"
+    "dev:server": "webpack-dashboard -- webpack-dev-server --config ./webpack/dev.config.js"
   },
   "dependencies": {
     "babel": "^6.5.2",
@@ -33,12 +33,17 @@
   },
   "devDependencies": {
     "babel-loader": "^6.2.10",
+    "css-loader": "^0.26.1",
     "eslint": "^3.14.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "jest": "^18.1.0",
+    "postcss": "^5.2.11",
+    "postcss-loader": "^1.2.2",
+    "style-loader": "^0.13.1",
     "typescript": "^2.1.5",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
