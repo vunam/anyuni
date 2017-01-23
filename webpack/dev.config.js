@@ -1,6 +1,6 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const webpackConfig = {
   context: path.resolve(__dirname, '../'),

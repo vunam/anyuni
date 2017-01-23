@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router'
+import SearchHero from '../../common/SearchHero/SearchHero'
 
 class Home extends React.Component {
   render() {
     return (
       <div>
-        Home page
-        <Link to="other">Other</Link>
+        <SearchHero />
       </div>
     )
   }

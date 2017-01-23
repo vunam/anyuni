@@ -4,6 +4,7 @@ const getHtmlTemplate = (html) => `
     <head>
       <title>anyuni</title>
       <meta charset="utf-8">
+      <link rel="stylesheet" href="/assets/dist/style.css" />
     </head>
     <body>
       <div id="root">${html}</div>
