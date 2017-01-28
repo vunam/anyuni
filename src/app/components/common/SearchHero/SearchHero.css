@@ -12,6 +12,11 @@
   width: 100%;
 }
 
+.searchForm {
+  position: relative;
+  padding-top: 1rem;
+}
+
 .searchInput {
   color: white;
   width: 100%;
@@ -21,6 +26,29 @@
   border: none;
   border-bottom: 0.1rem solid white;
   font-weight: 100;
+}
+
+.clearField {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.clearField:before {
+  display: block;
+  content: "X";
+  font-size: .75rem;
+  width: 1rem;
+  height: 1rem;
+  padding: .3rem;
+  border-radius: 50%;
+  font-weight: bold;
+  color: white;
+  border: 1px solid white;
 }
 
 ::-webkit-input-placeholder {
