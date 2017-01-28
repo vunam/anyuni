@@ -1,6 +1,5 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const webpackConfig = {
   context: path.resolve(__dirname, '../'),
@@ -43,7 +42,6 @@ const webpackConfig = {
       '*': `http://localhost:${process.env.PORT || 3000}`
     },
     plugins: [
-      new DashboardPlugin()
     ]
   }
 }
