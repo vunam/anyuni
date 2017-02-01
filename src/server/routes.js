@@ -1,5 +1,6 @@
 import KoaRouter from 'koa-router'
 import send from 'koa-send'
+import apiHandler from './handlers/api'
 import renderApp from './helper/renderApp'
 
 const router = new KoaRouter()
@@ -10,9 +11,7 @@ router
   })
 
   // Reserved for api
-  .get('/api/*', (ctx) => {
-    ctx.body = 'hello anyuni'
-  })
+  .get('/api/*', apiHandler)
 
   // assets
   .get('/assets/*', (ctx, next) => {
